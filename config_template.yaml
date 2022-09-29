@@ -1,0 +1,129 @@
+dir_work: /data/home/pengjia/Project_Human_DATA/ChineseQuartet/ref_based_analysis/recobination_20220818/
+chromsomes:
+  chr1,chr2,chr3,chr4,chr5,chr6,chr7,chr8,chr9,chr10,chr11,chr12,chr13,chr14,chr15,chr16,chr17,chr18,chr19,chr20,chr21,chr22,chrX
+mapping_qual_thresh: 30
+software:
+  samtools: "/data/home/pengjia/miniconda3/envs/default/bin/samtools"
+#  whatshap: "/data/home/pengjia/miniconda3/envs/default/bin/whatshap"
+  whatshap: "/data/home/pengjia/miniconda3/envs/whatshap_20220824/bin/whatshap"
+  tabix: "/data/home/pengjia/miniconda3/envs/default/bin/tabix"
+
+#  minimap2:
+
+#  bedtools: "/data/home/pengjia/miniconda3/envs/default/bin/bedtools"
+#  bcftools: "/data/home/pengjia/miniconda3/envs/default/bin/bcftools"
+
+#  bgzip:  "/data/home/pengjia/miniconda3/envs/default/bin/bgzip"
+
+reference: /data/DATA/Reference/human/GRCh38_full_analysis_set_plus_decoy_hla/genome/GRCh38_full_analysis_set_plus_decoy_hla.fa
+family:
+  ChineseQuartet:
+    names:
+      paternal:
+        LCL7:
+          sex: Male
+      maternal:
+        LCL8
+      probands:
+        - LCL5:
+            sex: Female
+        - LCL6:
+            sex: Female
+    merged_vcf: /data/home/pengjia/Project_Human_DATA/ChineseQuartet/ref_based_analysis/variants/final/ChineseQuartet.GRCh38.HiFi.minimap2.deepvariant.raw.vcf.gz
+    bams:
+      LCL5:
+        HiFi: /data/home/pengjia/Project_Human_DATA/ChineseQuartet/ref_based_analysis/aligned_reads/ChineseQuartet/LCL5/ChineseQuartet.LCL5.GRCh38.HiFi.minimap2.bam
+        ONT: /data/home/pengjia/Project_Human_DATA/ChineseQuartet/ref_based_analysis/aligned_reads/ChineseQuartet/LCL5/ChineseQuartet.LCL5.GRCh38.ONT.minimap2.bam
+        ONTUL: /data/home/pengjia/Project_Human_DATA/ChineseQuartet/ref_based_analysis/aligned_reads/ChineseQuartet/LCL5_ONT/ChineseQuartet.LCL5_ONT.GRCh38.ONT.minimap2.bam
+      LCL6:
+        HiFi: /data/home/pengjia/Project_Human_DATA/ChineseQuartet/ref_based_analysis/aligned_reads/ChineseQuartet/LCL6/ChineseQuartet.LCL6.GRCh38.HiFi.minimap2.bam
+        ONT: /data/home/pengjia/Project_Human_DATA/ChineseQuartet/ref_based_analysis/aligned_reads/ChineseQuartet/LCL6/ChineseQuartet.LCL6.GRCh38.ONT.minimap2.bam
+      LCL7:
+        HiFi: /data/home/pengjia/Project_Human_DATA/ChineseQuartet/ref_based_analysis/aligned_reads/ChineseQuartet/LCL7/ChineseQuartet.LCL7.GRCh38.HiFi.minimap2.bam
+        ONT: /data/home/pengjia/Project_Human_DATA/ChineseQuartet/ref_based_analysis/aligned_reads/ChineseQuartet/LCL7/ChineseQuartet.LCL7.GRCh38.ONT.minimap2.bam
+      LCL8:
+        HiFi: /data/home/pengjia/Project_Human_DATA/ChineseQuartet/ref_based_analysis/aligned_reads/ChineseQuartet/LCL8/ChineseQuartet.LCL8.GRCh38.HiFi.minimap2.bam
+        ONT: /data/home/pengjia/Project_Human_DATA/ChineseQuartet/ref_based_analysis/aligned_reads/ChineseQuartet/LCL8/ChineseQuartet.LCL8.GRCh38.ONT.minimap2.bam
+  HGSVC_CHS:
+    names:
+      paternal:
+        HG00512
+      maternal:
+        HG00513
+      probands:
+        - HG00514
+    merged_vcf: /data/home/pengjia/Project_Human_DATA/ChineseQuartet/ref_based_analysis/variants/final/HGSVC_CHS.GRCh38.HiFi.minimap2.deepvariant.raw.vcf.gz
+    bams:
+      HG00512:
+        HiFi: /data/DATA/HGSVC/aligned_reads/HGSVC_CHS/HG00512/HGSVC_CHS.HG00512.GRCh38.HiFi.minimap2.bam
+      HG00513:
+        HiFi: /data/DATA/HGSVC/aligned_reads/HGSVC_CHS/HG00513/HGSVC_CHS.HG00513.GRCh38.HiFi.minimap2.bam
+      HG00514:
+        HiFi: /data/DATA/HGSVC/aligned_reads/HGSVC_CHS/HG00514/HGSVC_CHS.HG00514.GRCh38.HiFi.minimap2.bam
+
+  HGSVC_PUR:
+    names:
+      paternal:
+        HG00731
+      maternal:
+        HG00732
+      probands:
+        - HG00733
+    merged_vcf: /data/home/pengjia/Project_Human_DATA/ChineseQuartet/ref_based_analysis/variants/final/HGSVC_PUR.GRCh38.HiFi.minimap2.deepvariant.raw.vcf.gz
+    bams:
+      HG00731:
+        HiFi: /data/DATA/HGSVC/aligned_reads/HGSVC_PUR/HG00731/HGSVC_PUR.HG00731.GRCh38.HiFi.minimap2.bam
+      HG00732:
+        HiFi: /data/DATA/HGSVC/aligned_reads/HGSVC_PUR/HG00732/HGSVC_PUR.HG00732.GRCh38.HiFi.minimap2.bam
+      HG00733:
+        HiFi: /data/DATA/HGSVC/aligned_reads/HGSVC_PUR/HG00733/HGSVC_PUR.HG00733.GRCh38.HiFi.minimap2.bam
+  HGSVC_YRI:
+    names:
+      paternal:
+        NA19239
+      maternal:
+        NA19238
+      probands:
+        - NA19240
+    merged_vcf: /data/home/pengjia/Project_Human_DATA/ChineseQuartet/ref_based_analysis/variants/final/HGSVC_YRI.GRCh38.HiFi.minimap2.deepvariant.raw.vcf.gz
+    bams:
+      NA19238:
+        HiFi: /data/DATA/HGSVC/aligned_reads/HGSVC_YRI/NA19238/HGSVC_YRI.NA19238.GRCh38.HiFi.minimap2.bam
+      NA19239:
+        HiFi: /data/DATA/HGSVC/aligned_reads/HGSVC_YRI/NA19239/HGSVC_YRI.NA19239.GRCh38.HiFi.minimap2.bam
+      NA1940:
+        HiFi: /data/DATA/HGSVC/aligned_reads/HGSVC_YRI/NA19240/HGSVC_YRI.NA19240.GRCh38.HiFi.minimap2.bam
+  GIAB_ChineseTrio:
+    names:
+      paternal:
+        HG006
+      maternal:
+        HG007
+      probands:
+        - HG005
+    merged_vcf: /data/home/pengjia/Project_Human_DATA/ChineseQuartet/ref_based_analysis/variants/final/GIAB_ChineseTrio.GRCh38.HiFi.minimap2.deepvariant.raw.vcf.gz
+    bams:
+      HG005:
+        HiFi: /data/DATA/GIAB/align_reads/GIAB_ChineseTrio/HG005/GIAB_ChineseTrio.HG005.GRCh38.HiFi.minimap2.bam
+      HG006:
+        HiFi: /data/DATA/GIAB/align_reads/GIAB_ChineseTrio/HG006/GIAB_ChineseTrio.HG006.GRCh38.HiFi.minimap2.bam
+      HG007:
+        HiFi: /data/DATA/GIAB/align_reads/GIAB_ChineseTrio/HG007/GIAB_ChineseTrio.HG007.GRCh38.HiFi.minimap2.bam
+
+  GIAB_AshkenazimTrio:
+    names:
+      paternal:
+        HG003
+      maternal:
+        HG004
+      probands:
+        - HG002
+    merged_vcf: /data/home/pengjia/Project_Human_DATA/ChineseQuartet/ref_based_analysis/variants/final/GIAB_AshkenazimTrio.GRCh38.HiFi.minimap2.deepvariant.raw.vcf.gz
+    bams:
+      HG002:
+        HiFi: /data/DATA/GIAB/align_reads/GIAB_AshkenazimTrio/HG002/GIAB_AshkenazimTrio.HG002.GRCh38.HiFi.minimap2.bam
+      HG003:
+        HiFi: /data/DATA/GIAB/align_reads/GIAB_AshkenazimTrio/HG003/GIAB_AshkenazimTrio.HG003.GRCh38.HiFi.minimap2.bam
+      HG004:
+        HiFi: /data/DATA/GIAB/align_reads/GIAB_AshkenazimTrio/HG004/GIAB_AshkenazimTrio.HG004.GRCh38.HiFi.minimap2.bam
+
