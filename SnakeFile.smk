@@ -6,7 +6,7 @@ import pandas as pd
 print("MERD: Meiotic Recombination Detection Pipeline with PacBio HiFi sequencing reads")
 print(f"MERD: {version}")
 configfile: "config.yaml"
-version = "0.1.Alpha"
+version = "0.1.beta"
 ava_family = {}
 unavailable_family = []
 available_family = {}
