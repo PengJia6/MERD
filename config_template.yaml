@@ -127,3 +127,11 @@ family:
       HG004:
         HiFi: /data/DATA/GIAB/align_reads/GIAB_AshkenazimTrio/HG004/GIAB_AshkenazimTrio.HG004.GRCh38.HiFi.minimap2.bam
 
+ChineseQuartet.merged3tech.DEL.sort.pass.val.RP.DPMQ.final.vcf.gz
+ChineseQuartet.merged3tech.DEL.sort.pass.val.RP.DPMQ.final.vcf.gz.tbi
+ChineseQuartet.merged3tech.INS.sort.pass.val.RP.DPMQ.final.vcf.gz
+ChineseQuartet.merged3tech.INS.sort.pass.val.RP.DPMQ.final.vcf.gz.tbi
+ChineseQuartet.merged3tech.Indel.sort.pass.val.RP.DPMQ.final.vcf.gz
+ChineseQuartet.merged3tech.Indel.sort.pass.val.RP.DPMQ.final.vcf.gz.tbi
+ChineseQuartet.merged3tech.SNV.sort.pass.val.RP.DPMQ.final.vcf.gz
+ChineseQuartet.merged3tech.SNV.sort.pass.val.RP.DPMQ.final.vcf.gz.tbi

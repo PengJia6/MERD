@@ -4,9 +4,9 @@ import numpy as np
 import pandas as pd
 
 print("MERD: Meiotic Recombination Detection Pipeline with PacBio HiFi sequencing reads")
+version = "0.1.beta"
 print(f"MERD: {version}")
 configfile: "config.yaml"
-version = "0.1.beta"
 ava_family = {}
 unavailable_family = []
 available_family = {}
@@ -167,6 +167,9 @@ rule filter_vcf:
                 else:
                     if info["DP"] > 3 * depth_value[sample] or info["DP"] < depth_value[sample] * 0.2:
                         filter = True
+                        continue
+                    if None in info["AD"] or info["AD"][1]/info["DP"]<0.3:
+                        filter =True
                         continue
                 gt_dict[sample] = info["GT"]
                 dp_dict[sample] = info["DP"]
@@ -716,7 +719,7 @@ rule meiotic_recombination_detection:
             if shift_err / total_support > 0.5:
                 this_event_info["Filter"] = "Maybe_De_Novol_Mutation"
             else:
-                if series_support>shift_err and series_support> sample_depth_dict["this_hap"][0]*0.1:
+                if series_support > shift_err and series_support > sample_depth_dict["this_hap"][0] * 0.1:
                     this_event_info["Filter"] = "Meiotic_Recombination"
                 else:
                     this_event_info["Filter"] = "Need_more_validation"
